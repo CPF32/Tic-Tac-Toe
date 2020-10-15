@@ -7,5 +7,7 @@
 // require('./example')
 
 $(() => {
-  // your JS code goes here
+
+
+
 })

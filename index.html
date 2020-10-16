@@ -37,11 +37,16 @@
 
             <br><br>
             <input id = "sign-up-submit" type="submit" value="Sign Up">
+
+            <label id = "message1"></label>
+
           </form>
 
           <br><br>
 
           <form id="sign-in-form">
+            <label id = "message2"></label>
+
             <p class = "log">Login</p>
 
             <label for = "sign-in-email">Email:</label>
@@ -53,19 +58,24 @@
 
             <br><br>
             <input id = "sign-in-submit" type="submit" value="Login">
+
           </form>
 
           <form id="sign-out-form" class="border">
             <fieldset>
-              <legend>Sign Out!</legend>
-              <input type="submit" value="Sign out!">
+              <p>Sign Out</p>
+              <input id = "sign-out-submit" type="submit" value="Sign out!">
             </fieldset>
           </form>
 
+
           <form id="change-password-form">
-            <legend>Change Password!</legend>
-            <input type="password" name="passwords[old]" placeholder="Old Password">
-            <input type="password" name="passwords[new]" placeholder="New Password">
+            <br><br>
+            <label id = "message3"></label>
+
+            <p>Change Password</p>
+            <input id = "old-pw" type="password" name="passwords[old]" placeholder="Old Password">
+            <input id = "new-pw" type="password" name="passwords[new]" placeholder="New Password">
             <input id = "cpwd-submit" type="submit" value="Change Password">
           </form>
         </div>

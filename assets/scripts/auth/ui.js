@@ -2,15 +2,14 @@
 const store = require('./../store')
 
 const signUpSuccess = function (response) {
-  $('#message').text('Thanks for signing up ' + response.user.email)
+  $('#message1').text('Thanks for signing up ' + response.user.email)
 }
 
 const signUpFailure = function () {
-  $('#message').text('Sign up failed. Please, try again.')
+  $('#message1').text('Sign up failed. Please, try again.')
 }
 
 const signInSuccess = function (response) {
-  $('#message').text('Your token is ' + response.user.token)
   // save user in the api resonse to our store object
   store.user = response.user
 
@@ -21,11 +20,11 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function () {
-  $('#message').text('Sign in failed. Please, try again.')
+  $('#message2').text('Sign in failed. Please, try again.')
 }
 
 const onSignOutSuccess = function () {
-  $('#message').text('Signed out successfully.')
+  $('#message3').text('Signed out successfully.')
   store.user = null
   $('#change-password-form').hide()
   $('#sign-out-form').hide()
@@ -34,15 +33,15 @@ const onSignOutSuccess = function () {
 }
 
 const onSignOutFailure = function () {
-  $('#message').text('Sign out failed.')
+  $('#message3').text('Sign out failed.')
 }
 
 const onChangePasswordSuccess = function () {
-  $('#message').text('Password successfully changed!')
+  $('#message3').text('Password successfully changed!')
 }
 
 const onChangePasswordFailure = function () {
-  $('#message').text('Password change failed. Please, try again.')
+  $('#message3').text('Password change failed. Please, try again.')
 }
 
 module.exports = {

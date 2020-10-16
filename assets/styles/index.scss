@@ -60,11 +60,29 @@ h1 {
   border-color: #009a01;
 }
 
-#sign-up-submit, #sign-in-submit {
+#sign-up-submit,
+#sign-in-submit,
+#cpwd-submit,
+#sign-out-submit {
   background-color: #606060;
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
   justify-content: center;
   width: 100%;
+}
+
+#message1,
+#message2,
+#message3 {
+  color: #009a01;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#old-pw,
+#new-pw {
+  margin-bottom: 10px;
 }

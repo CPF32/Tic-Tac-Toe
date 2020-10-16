@@ -10,12 +10,33 @@
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
       <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8"
+      defer></script>
+      <script src="public/application.js" type="text/javascript"
+      charset="utf-8" defer></script>
     </head>
 
     <body>
-      <h1>Browser Template</h1>
+      <h1>Tic-Tac-Toe</h1>
+
+      <div class="login">
+        <form id="login" method="get" action="login.php">
+
+          <label for = "sign-up-email">Email:</label>
+          <input id = "sign-up-email" type="email" name="credentials[email]" placeholder="Email">
+
+          <br><br> <!-- Break line between email and PW forms -->
+          <label for = "sign-up-password">Password:</label>
+          <input id = "sign-up-password" type="password" name=credentials[password] placeholder="Password">
+
+          <br><br>  <!-- Break line between PW and PWC forms -->
+          <label for = "sign-up-password_confirmation">Confirm Password:</label>
+          <input id = "sign-up-password_confirmation" type="password" name=credentials[password_confirmation] placeholder="Password">
+
+          <br><br>  <!-- Break line between PWC and Submit -->
+          <input id = "sign-in-submit" type="submit" value="Sign Up">
+        </form>
+      </div>
     </body>
 
 </html>

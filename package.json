@@ -1,15 +1,14 @@
 {
-  "name": "Tic-Tac-Toe Project",
+  "name": "Tic-Tac-Toe-Client",
   "version": "0.0.3",
   "private": true,
   "license": {
     "software": "GNU GPLv3",
-    "content": "CC­BY­NC­SA 4.0"
+    "content": "CCBYNCSA 4.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.1.2",
-    "eslint": "^7.11.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3"
   },
@@ -19,6 +18,7 @@
     "babel-preset-env": "^1.6.1",
     "clone": "^2.1.1",
     "css-loader": "^0.28.10",
+    "eslint": "^6.3.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",

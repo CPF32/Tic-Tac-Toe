@@ -19,24 +19,43 @@
     <body>
       <h1>Tic-Tac-Toe</h1>
 
-      <div class="login">
-        <form id="login" method="get" action="login.php">
+      <section class = "container">
+        <div class = "sign-up">
+          <form id="sign-up-form">
+            <p>Sign Up</p>
 
-          <label for = "sign-up-email">Email:</label>
-          <input id = "sign-up-email" type="email" name="credentials[email]" placeholder="Email">
+            <label for = "sign-up-email">Email:</label>
+            <input id = "sign-up-email" type="email" name="credentials[email]" placeholder="Email">
 
-          <br><br> <!-- Break line between email and PW forms -->
-          <label for = "sign-up-password">Password:</label>
-          <input id = "sign-up-password" type="password" name=credentials[password] placeholder="Password">
+            <br><br> <!-- Break line between email and PW forms -->
+            <label for = "sign-up-password">Password:</label>
+            <input id = "sign-up-password" type="password" name=credentials[password] placeholder="Password">
 
-          <br><br>  <!-- Break line between PW and PWC forms -->
-          <label for = "sign-up-password_confirmation">Confirm Password:</label>
-          <input id = "sign-up-password_confirmation" type="password" name=credentials[password_confirmation] placeholder="Password">
+            <br><br>  <!-- Break line between PW and PWC forms -->
+            <label for = "sign-up-password_confirmation">Confirm Password:</label>
+            <input id = "sign-up-password_confirmation" type="password" name=credentials[password_confirmation] placeholder="Password">
 
-          <br><br>  <!-- Break line between PWC and Submit -->
-          <input id = "sign-in-submit" type="submit" value="Sign Up">
-        </form>
-      </div>
+            <br><br>
+            <input id = "sign-up-submit" type="submit" value="Sign Up">
+          </form>
+
+          <br><br>
+
+          <form id="sign-in-form">
+            <p class = "log">Login</p>
+
+            <label for = "sign-in-email">Email:</label>
+            <input id = "sign-in-email" type="email" name="credentials[email]" placeholder="Email">
+
+            <br><br> <!-- Break line between email and PW forms -->
+            <label for = "sign-in-password">Password:</label>
+            <input id = "sign-in-password" type="password" name=credentials[password] placeholder="Password">
+
+            <br><br>
+            <input id = "sign-in-submit" type="submit" value="Login">
+          </form>
+        </div>
+      </section>
     </body>
 
 </html>

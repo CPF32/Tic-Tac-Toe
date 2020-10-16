@@ -1,4 +1,9 @@
-curl "https://library-express-api.herokuapp.com/sign-in" \
+#!/bin/bash
+
+API="https://tic-tac-toe-api-development.herokuapp.com"
+URL_PATH="/sign-in"
+
+curl "${API}${URL_PATH}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

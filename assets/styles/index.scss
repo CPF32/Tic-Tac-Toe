@@ -63,13 +63,21 @@ h1 {
 #sign-up-submit,
 #sign-in-submit,
 #cpwd-submit,
-#sign-out-submit {
+#sign-out-submit,
+#play-game-submit {
   background-color: #606060;
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
   justify-content: center;
   width: 100%;
+}
+
+#play-game-submit {
+  background-color: #ff0000;
+  font-size: 25px;
+  margin-bottom: 25px;
+  padding: 10px;
 }
 
 #message1,

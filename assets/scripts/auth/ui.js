@@ -13,6 +13,7 @@ const signInSuccess = function (response) {
   // save user in the api resonse to our store object
   store.user = response.user
 
+  $('#play-game-form').show()
   $('#change-password-form').show()
   $('#sign-out-form').show()
   $('#sign-up-form').hide()
@@ -25,7 +26,10 @@ const signInFailure = function () {
 
 const onSignOutSuccess = function () {
   $('#message3').text('Signed out successfully.')
+
   store.user = null
+
+  $('#play-game-form').hide()
   $('#change-password-form').hide()
   $('#sign-out-form').hide()
   $('#sign-up-form').show()
@@ -33,7 +37,7 @@ const onSignOutSuccess = function () {
 }
 
 const onSignOutFailure = function () {
-  $('#message3').text('Sign out failed.')
+  $('#message3').text('Sign out Failed.')
 }
 
 const onChangePasswordSuccess = function () {

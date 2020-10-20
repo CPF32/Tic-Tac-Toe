@@ -19,7 +19,6 @@ const onBoxClickSuccess = function () {
 }
 
 const onUpdateGameSuccess = function (response) {
-  store.currentPlayer = store.currentPlayer === 'O' ? 'X' : 'O'
   store.game = response.game
 
   $('#message4').text('Valid Move.')
@@ -29,10 +28,26 @@ const onUpdateGameFailure = function () {
   $('#message4').text('Invalid Move.')
 }
 
+const onWinGameSuccess = function () {
+  $('#message5').text('Winner is: ' + store.currentPlayer + '!')
+
+  // create new game
+
+  // $('.play-new-game').hide()
+  // $('.sign-up').show()
+}
+
+const onWinGameFailure = function () {
+  $('#message5').text('Game is Ongoing.')
+  store.currentPlayer = store.currentPlayer === 'O' ? 'X' : 'O'
+}
+
 module.exports = {
   onPlayGameSuccess,
   onPlayGameFailure,
   onBoxClickSuccess,
   onUpdateGameSuccess,
-  onUpdateGameFailure
+  onUpdateGameFailure,
+  onWinGameSuccess,
+  onWinGameFailure
 }

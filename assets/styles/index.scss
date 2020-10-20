@@ -106,7 +106,8 @@ h1 {
 #sign-in-submit,
 #cpwd-submit,
 #sign-out-submit,
-#play-game-submit {
+#play-game-submit,
+#games-played-submit {
   background-color: #606060;
   border-radius: 5px;
   color: #fff;
@@ -117,6 +118,13 @@ h1 {
 
 #play-game-submit {
   background-color: #ff0000;
+  font-size: 25px;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+#games-played-submit {
+  background-color: #0000ff;
   font-size: 25px;
   margin-bottom: 25px;
   padding: 10px;

@@ -14,28 +14,22 @@ const onPlayGame = function (event) {
     .catch(ui.onSignOutFailure)
 }
 
-// initialize first player as 'X'
-let currentPlayer = 'X'
+const onBoxClick = function (event) {
+  event.preventDefault()
 
-const onBoxClick = (event) => {
-  console.log('click')
-
-  // select the box that the mouse clicked on
   const box = $(event.target)
-  const boxIndex = box.data('cell-index')
-  box.data('index', boxIndex)
+
+  const cellIndex = box.data('cell-index')
   box.data('value', store.currentPlayer)
 
-  // change background on clicked box to transparent then set text to player
-  box.css('background', 'transparent').text(currentPlayer)
+  box.css('background', 'transparent').text(store.currentPlayer)
 
-  // ternary op to change value of the currentPlayer after turn
-  currentPlayer = currentPlayer === 'O' ? 'X' : 'O'
+  api.updateGame(cellIndex)
+    .then(ui.onUpdateGameSuccess)
+    .catch(ui.onUpdateGameFailure)
 }
 
-// event handler for when a box is clicked
-$('.box').on('click', onBoxClick)
-
 module.exports = {
-  onPlayGame
+  onPlayGame,
+  onBoxClick
 }

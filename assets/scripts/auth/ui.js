@@ -14,6 +14,7 @@ const signInSuccess = function (response) {
   store.user = response.user
 
   $('#play-game-form').show()
+  $('#games-played-form').show()
   $('#change-password-form').show()
   $('#sign-out-form').show()
   $('#sign-up-form').hide()

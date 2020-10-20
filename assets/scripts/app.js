@@ -11,5 +11,6 @@ $(() => {
   $('#change-password-form').hide()
   $('#sign-out-form').hide()
   $('#play-game-form').hide()
+  $('#games-played-form').hide()
   $('.play-new-game').hide()
 })

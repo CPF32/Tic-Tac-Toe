@@ -13,14 +13,22 @@ const playGame = function (data) {
   })
 }
 
-const updateGame = function (data) {
+const updateGame = function (currentBox) {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: data
+    data: {
+      game: {
+        cell: {
+          index: currentBox,
+          value: store.currentPlayer
+        },
+        over: false
+      }
+    }
   })
 }
 

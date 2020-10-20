@@ -3,6 +3,7 @@ const store = require('./../store')
 
 const onPlayGameSuccess = function (response) {
   $('.sign-up').hide()
+  $('.container2').show()
   $('.play-new-game').show()
 
   store.game = response.game
@@ -29,12 +30,12 @@ const onUpdateGameFailure = function () {
 }
 
 const onWinGameSuccess = function () {
-  $('#message5').text('Winner is: ' + store.currentPlayer + '!')
+  $('#winner').text('Winner is: ' + store.currentPlayer + '!')
 
   // create new game
 
-  // $('.play-new-game').hide()
-  // $('.sign-up').show()
+  $('.container2').hide()
+  $('.sign-up').show()
 }
 
 const onWinGameFailure = function () {

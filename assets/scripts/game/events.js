@@ -7,6 +7,8 @@ const store = require('../store')
 const onPlayGame = function (event) {
   event.preventDefault()
 
+  $('.box').text('')
+
   api.playGame()
     // handle successul response
     .then(ui.onPlayGameSuccess)

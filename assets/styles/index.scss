@@ -4,7 +4,7 @@ body {
   background-color: #c7ffb5;
 }
 
-p {
+p, #winner {
   font-size: 25px;
   font-weight: bolder;
   text-align: center;
@@ -146,6 +146,11 @@ h1 {
   display: block;
   font-size: 30px;
   font-weight: bolder;
+
+}
+
+#winner {
+  font-size: 30px;
 
 }
 

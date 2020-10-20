@@ -20,13 +20,20 @@ const onBoxClick = function (event) {
   const box = $(event.target)
 
   const cellIndex = box.data('cell-index')
-  box.data('value', store.currentPlayer)
 
-  box.css('background', 'transparent').text(store.currentPlayer)
+  const boxValue = box.data('value')
 
-  api.updateGame(cellIndex)
-    .then(ui.onUpdateGameSuccess)
-    .catch(ui.onUpdateGameFailure)
+  if (boxValue === undefined) {
+    box.data('value', store.currentPlayer)
+
+    box.css('background', 'transparent').text(store.currentPlayer)
+
+    api.updateGame(cellIndex)
+      .then(ui.onUpdateGameSuccess)
+      .catch(ui.onUpdateGameFailure)
+  } else {
+    ui.onUpdateGameFailure()
+  }
 }
 
 module.exports = {

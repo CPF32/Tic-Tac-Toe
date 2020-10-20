@@ -20,11 +20,13 @@ const onBoxClickSuccess = function () {
 
 const onUpdateGameSuccess = function (response) {
   store.currentPlayer = store.currentPlayer === 'O' ? 'X' : 'O'
-  console.log('Nice!', response)
+  store.game = response.game
+
+  $('#message4').text('Valid Move.')
 }
 
 const onUpdateGameFailure = function () {
-  $('#message3').text('Invalid Move.')
+  $('#message4').text('Invalid Move.')
 }
 
 module.exports = {

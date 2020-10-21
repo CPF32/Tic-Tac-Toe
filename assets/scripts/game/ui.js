@@ -51,9 +51,7 @@ const onWinGameFailure = function () {
 }
 
 const onGameCountSuccess = function (response) {
-  // this is where my game count breaks, i know im not counting the length of
-  // just the games in store, so its got to be assigned to a user
-  $('#winner').text('Games Played: ' + response.id.games.length)
+  $('#winner').text('Games Played: ' + response.games.length)
 }
 
 const onGameCountFailure = function (response) {

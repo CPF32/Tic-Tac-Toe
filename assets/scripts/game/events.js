@@ -1,5 +1,5 @@
 'use strict'
-// const getFormFields = require('./../../../lib/get-form-fields')
+const getFormFields = require('./../../../lib/get-form-fields')
 const ui = require('./ui')
 const api = require('./api')
 const store = require('../store')
@@ -65,8 +65,20 @@ const onWinCondition = function () {
   }
 }
 
+const onGameCount = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.gameCount(data)
+    .then(ui.onGameCountSuccess)
+    .catch(ui.onGameCountFailure)
+}
+
 module.exports = {
   onPlayGame,
   onBoxClick,
-  onWinCondition
+  onWinCondition,
+  onGameCount
 }

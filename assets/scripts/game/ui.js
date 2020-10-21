@@ -5,8 +5,11 @@ const onPlayGameSuccess = function (response) {
   $('.sign-up').hide()
   $('.container2').show()
   $('.play-new-game').show()
+  $('#message4').text('')
+  $('#message5').text('')
 
   store.game = response.game
+  store.game.over = false
   store.currentPlayer = 'X'
 }
 
@@ -32,6 +35,8 @@ const onUpdateGameFailure = function () {
 const onWinGameSuccess = function () {
   $('#winner').text('Winner is: ' + store.currentPlayer + '!')
 
+  store.game.over = true
+
   $('.container2').hide()
   $('.sign-up').show()
 }
@@ -45,9 +50,15 @@ const onWinGameFailure = function () {
   }
 }
 
-// const onCheckGameSuccess = function () {
-//
-// }
+const onGameCountSuccess = function (response) {
+  // this is where my game count breaks, i know im not counting the length of
+  // just the games in store, so its got to be assigned to a user
+  $('#winner').text('Games Played: ' + response.id.games.length)
+}
+
+const onGameCountFailure = function (response) {
+  $('#winner').text('Game Count Error.')
+}
 
 module.exports = {
   onPlayGameSuccess,
@@ -56,5 +67,7 @@ module.exports = {
   onUpdateGameSuccess,
   onUpdateGameFailure,
   onWinGameSuccess,
-  onWinGameFailure
+  onWinGameFailure,
+  onGameCountSuccess,
+  onGameCountFailure
 }

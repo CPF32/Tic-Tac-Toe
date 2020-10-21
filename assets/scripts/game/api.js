@@ -32,7 +32,19 @@ const updateGame = function (currentBox) {
   })
 }
 
+const gameCount = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    method: 'GET',
+    data: data
+  })
+}
+
 module.exports = {
   playGame,
-  updateGame
+  updateGame,
+  gameCount
 }

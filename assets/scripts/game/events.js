@@ -8,7 +8,6 @@ const onPlayGame = function (event) {
   event.preventDefault()
 
   $('.box').text('')
-
   api.playGame()
     // handle successul response
     .then(ui.onPlayGameSuccess)
@@ -39,8 +38,6 @@ const onBoxClick = function (event) {
 }
 
 const onWinCondition = function () {
-  console.log(store.game.cells)
-
   if (store.game.cells[0] !== '' && store.game.cells[0] === store.game.cells[1] && store.game.cells[0] === store.game.cells[2]) {
     ui.onWinGameSuccess()
   } else if (store.game.cells[3] !== '' && store.game.cells[3] === store.game.cells[4] && store.game.cells[3] === store.game.cells[5]) {
@@ -58,7 +55,13 @@ const onWinCondition = function () {
   } else if (store.game.cells[2] !== '' && store.game.cells[2] === store.game.cells[4] && store.game.cells[2] === store.game.cells[6]) {
     ui.onWinGameSuccess()
   } else {
-    ui.onWinGameFailure()
+    if (store.game.cells.every(element => element !== '')) {
+      $('#winner').text('Tie Game!')
+      $('.container2').hide()
+      $('.sign-up').show()
+    } else {
+      ui.onWinGameFailure()
+    }
   }
 }
 

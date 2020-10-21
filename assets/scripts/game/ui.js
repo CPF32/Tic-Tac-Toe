@@ -32,16 +32,22 @@ const onUpdateGameFailure = function () {
 const onWinGameSuccess = function () {
   $('#winner').text('Winner is: ' + store.currentPlayer + '!')
 
-  // create new game
-
   $('.container2').hide()
   $('.sign-up').show()
 }
 
 const onWinGameFailure = function () {
-  $('#message5').text('Game is Ongoing.')
   store.currentPlayer = store.currentPlayer === 'O' ? 'X' : 'O'
+  if (store.currentPlayer === 'X') {
+    $('#message5').text("Current Player Turn: X's")
+  } else {
+    $('#message5').text("Current Player Turn: O's")
+  }
 }
+
+// const onCheckGameSuccess = function () {
+//
+// }
 
 module.exports = {
   onPlayGameSuccess,

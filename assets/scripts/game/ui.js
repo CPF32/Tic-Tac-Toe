@@ -36,7 +36,7 @@ const onWinGameSuccess = function () {
   $('#winner').text('Winner is: ' + store.currentPlayer + '!')
 
   store.game.over = true
-
+  $('#message3').text('')
   $('.container2').hide()
   $('.sign-up').show()
 }

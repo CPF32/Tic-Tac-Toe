@@ -57,6 +57,7 @@ const onWinCondition = function () {
   } else {
     if (store.game.cells.every(element => element !== '')) {
       $('#winner').text('Tie Game!')
+      $('#message3').text('')
       $('.container2').hide()
       $('.sign-up').show()
     } else {

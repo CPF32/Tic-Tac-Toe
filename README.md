@@ -71,3 +71,6 @@ implementation goals:
   - Sign out button
   - Play game button
   - Games stats button
+
+#### Original Image
+![Hand Sketched Wireframe](C:\Users\faric\Downloads\IMG_2469.jpg)

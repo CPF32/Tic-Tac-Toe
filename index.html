@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+      <title>Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8"
+      defer></script>
+      <script src="public/application.js" type="text/javascript"
+      charset="utf-8" defer></script>
+    </head>
+
+    <body>
+      <h1>Tic-Tac-Toe</h1>
+
+      <section class = "container1">
+        <div class = "sign-up">
+          <form id="sign-up-form">
+            <p>Sign Up</p>
+
+            <label for = "sign-up-email">Email:</label>
+            <input id = "sign-up-email" type="email" name="credentials[email]" placeholder="Email">
+
+            <br><br> <!-- Break line between email and PW forms -->
+            <label for = "sign-up-password">Password:</label>
+            <input id = "sign-up-password" type="password" name=credentials[password] placeholder="Password">
+
+            <br><br>  <!-- Break line between PW and PWC forms -->
+            <label for = "sign-up-password_confirmation">Confirm Password:</label>
+            <input id = "sign-up-password_confirmation" type="password" name=credentials[password_confirmation] placeholder="Password">
+
+            <br><br>
+            <input id = "sign-up-submit" type="submit" value="Sign Up">
+
+            <label id = "message1"></label>
+
+          </form>
+
+          <br><br>
+
+          <form id = "sign-in-form">
+            <label id = "message2"></label>
+
+            <p class = "log">Login</p>
+
+            <label for = "sign-in-email">Email:</label>
+            <input id = "sign-in-email" type="email" name="credentials[email]" placeholder="Email">
+
+            <br><br> <!-- Break line between email and PW forms -->
+            <label for = "sign-in-password">Password:</label>
+            <input id = "sign-in-password" type="password" name=credentials[password] placeholder="Password">
+
+            <br><br>
+            <input id = "sign-in-submit" type="submit" value="Login">
+
+          </form>
+
+          <p id='winner'></p>
+
+          <form id="play-game-form">
+            <fieldset>
+              <input id = "play-game-submit" type="submit" value="PLAY GAME!">
+            </fieldset>
+          </form>
+
+          <form id="games-played-form">
+            <fieldset>
+              <input id = "games-played-submit" type="submit" value="USER GAME STATS">
+            </fieldset>
+          </form>
+
+          <form id = "sign-out-form" class="border">
+            <fieldset>
+              <p>User Sign Out</p>
+              <input id = "sign-out-submit" type="submit" value="Sign Out">
+            </fieldset>
+          </form>
+
+          <form id="change-password-form">
+            <br><br>
+            <label id = "message3"></label>
+
+            <p>Change Password</p>
+            <input id = "old-pw" type="password" name="passwords[old]" placeholder="Old Password">
+            <input id = "new-pw" type="password" name="passwords[new]" placeholder="New Password">
+            <input id = "cpwd-submit" type="submit" value="Change Password">
+          </form>
+        </div>
+      </section>
+
+      <section class="container2">
+        <div class="play-new-game">
+          <!-- 3 rows of 3 columns with box class for styling (styling code along) -->
+          <div class="row h-100 board">
+            <!-- row 1 -->
+            <div class="col-4 box" data-cell-index='0'></div>
+            <div class="col-4 box" data-cell-index='1'></div>
+            <div class="col-4 box" data-cell-index='2'></div>
+            <!-- row 2 -->
+            <div class="col-4 box" data-cell-index='3'></div>
+            <div class="col-4 box" data-cell-index='4'></div>
+            <div class="col-4 box" data-cell-index='5'></div>
+            <!-- row 3 -->
+            <div class="col-4 box" data-cell-index='6'></div>
+            <div class="col-4 box" data-cell-index='7'></div>
+            <div class="col-4 box" data-cell-index='8'></div>
+          </div>
+        </div>
+        <label id = "message4"></label>
+        <label id = "message5"></label>
+      </section>
+    </body>
+
+</html>

@@ -16867,9 +16867,9 @@ var onBoxClick = function onBoxClick(event) {
 
   var cellIndex = box.data('cell-index');
 
-  var boxValue = box.data('value');
+  var boxValue = box.text();
 
-  if (boxValue === undefined) {
+  if (boxValue === '') {
     box.data('value', store.currentPlayer);
     box.css('background', 'transparent').text(store.currentPlayer);
 

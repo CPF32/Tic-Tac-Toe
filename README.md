@@ -73,4 +73,4 @@ implementation goals:
   - Games stats button
 
 #### Original Image
-![Hand Sketched Wireframe](C:\Users\faric\Downloads\IMG_2469.jpg)
+![Hand Sketched Wireframe](https://user-images.githubusercontent.com/69026929/96927139-3c979780-147c-11eb-93a5-fc6a1eaa82ab.jpg)

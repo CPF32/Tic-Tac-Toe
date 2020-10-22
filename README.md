@@ -3,6 +3,8 @@ This project is a game of tic tac toe with an API authorization implementation.
 My goal is to have the user be able to sign up, sign in, change their password
 if desired, and then be able to play and track the number of games played.
 
+- - - -
+
 ## Planning and Development
 My plan from the start was to break the project down into 4 steps.
   - Step 1: wirefram and user stories to outline my next steps
@@ -16,11 +18,15 @@ While I stayed on course for the majority of the project I will say I spent
 additional time in Step 1 designing the layout and CSS for the app. Step 4
 involved much more debugging than anticipated, but was able to get through it.
 
+- - - -
+
 ## Technologies Used
   - Javascript
   - HTML // CSS
   - Bootstrap
   - Jquery
+
+- - - -
 
 ## Unsolved Problems
 By the project deadline my application met all the requirements with the
@@ -32,6 +38,8 @@ I have fixed this issue since then, leaving me with only a few future
 implementation goals:
   - Gamemode vs the computer
   - Feature to go back and review previous game boards
+
+- - - -
 
 ## Wireframes & User Stories
 ### User Stories

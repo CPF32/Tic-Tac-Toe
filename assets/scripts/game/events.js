@@ -22,9 +22,9 @@ const onBoxClick = function (event) {
 
   const cellIndex = box.data('cell-index')
 
-  const boxValue = box.data('value')
+  const boxValue = box.text()
 
-  if (boxValue === undefined) {
+  if (boxValue === '') {
     box.data('value', store.currentPlayer)
     box.css('background', 'transparent').text(store.currentPlayer)
 
